@@ -26,8 +26,7 @@ public class Main {
             System.out.println(ex.getMessage());
         }
 
-        try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter("src/com/gmail/miv/repeatability_of_letters/MobyDick_result.txt"));
+        try (FileWriter writer = new FileWriter("src/com/gmail/miv/repeatability_of_letters/MobyDick_result.txt")){
             PrintWriter printWriter = new PrintWriter(writer);
             charFreq.entrySet().stream()
                     .sorted((e1, e2) -> -Integer.compare(e1.getValue(), e2.getValue()))
