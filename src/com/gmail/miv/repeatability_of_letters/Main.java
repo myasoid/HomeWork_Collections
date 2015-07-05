@@ -23,7 +23,6 @@ public class Main {
                 charFreq.put((char) c, newCount);
             }
         } catch (IOException ex) {
-
             System.out.println(ex.getMessage());
         }
 
@@ -36,7 +35,7 @@ public class Main {
             printWriter.flush();
             printWriter.close();
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
 
     }
